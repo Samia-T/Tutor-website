@@ -50,6 +50,7 @@ img {
     border: 1px solid var(--secondary-color);
     border-radius: 32px;
     background: var(--secondary-color);
+    color: var(--dark-color);
     cursor: pointer;
     transition: all 0.2s;
 }
@@ -67,6 +68,10 @@ img {
 
 .text-secondary {
     color: var(--secondary-color);
+}
+
+.section {
+  margin: 4rem 0;
 }
 
 /* section header */
@@ -154,6 +159,7 @@ img {
 
 .navbar i {
     font-size: 1.5rem;
+    width: min-content;
 }
 
 /* mobile menu */
@@ -339,6 +345,7 @@ img {
 .info-content i {
     margin-right: 0.5rem;
     color: var(--secondary-color);
+    width: min-content;
 }
 
 .info-left {
@@ -360,6 +367,7 @@ img {
 
 .takeaway-cards .card i{
     margin-right: 1rem;
+    width: min-content;
 }
 
 /* details */
@@ -404,6 +412,7 @@ img {
 
 .details i {
     margin-right: 0.5rem;
+    width: min-content;
 }
 
 /* Stats */
@@ -489,7 +498,6 @@ img {
 .newsletter input[type=email] {
     padding: 1rem 2rem;
     border: 1px solid #ccc;
-    width: 100%;
     border-radius: 32px;
     width: 100%;
     max-width: 400px;
@@ -503,7 +511,7 @@ img {
     padding: 6rem 2rem;
     text-align: center;
     font-size: 1.7rem;
-    margin: 0;
+    margin-bottom: 0;
 }
 
 .social a,
@@ -522,8 +530,12 @@ img {
 .social .social-icons {
     display: flex;
     justify-content: center;
-    gap: 0.5rem;
+    gap: 1rem;
     margin-top: 2rem;
+}
+
+.social .social-icons i {
+    width: min-content;
 }
 
 .footer {
@@ -657,16 +669,13 @@ img {
         grid-template-columns: repeat(2, 1fr);
     }
 
-    .chapter-cards {
-        grid-template-columns: 1fr;
-    }
-
+    .chapter-cards,
     .takeaway-cards {
         grid-template-columns: 1fr;
     }
 
     .details-flex,
-    .details + .details .details-flex
+    .details + .details .details-flex,
     .stats .stats-flex {
         flex-direction: column;
         gap: 2rem;
@@ -674,7 +683,8 @@ img {
 }
 
 @media(max-width:768px) {
-    .main-menu-items {
+    .main-menu-items,
+    .info-left {
         display: none;
     }
 
@@ -682,7 +692,7 @@ img {
         display: block;
     }
 
-    .navbar .navbar.mobile-menu-toggle {
+    .navbar .mobile-menu-toggle {
         display: block;
         padding: 10px;
     }
@@ -701,10 +711,6 @@ img {
 
     .info-content p {
         font-size: 1rem;
-    }
-
-    .info-left {
-        display: none;
     }
 
     .social .social-icons {
