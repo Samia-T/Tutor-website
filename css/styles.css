@@ -599,7 +599,7 @@ img {
     font-size: inherit;
     font-family: inherit;
     margin: 0 auto;
-    margin-bottom: 4.15rem;
+    margin-bottom: 4rem;
 }
 
 /* location */
@@ -650,7 +650,17 @@ img {
     }
 }
 
-@media(max-width:992px) {
+@media(max-width:992px) { 
+    .navbar img{
+        min-width:95px;
+        height: 32px;
+        padding-right: 1.2rem;
+    }
+
+    .navbar .main-menu-list {
+        gap: 1.2rem;
+    }
+
     .hero {
         text-align: center;
     }
